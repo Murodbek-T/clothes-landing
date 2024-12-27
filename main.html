@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/media.css" />
+
+    <!-- Linking fonts -->
+    <!-- ? Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ? Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Main page 4:20</title>
+  </head>
+  <body>
+    <div class="mobile-nav">
+      <div class="mobile-nav-header">
+        <div class="areas">
+          <div class="area">
+            <img src="./src/location-black.svg" alt="" />
+            <h4>москва</h4>
+          </div>
+
+          <div class="area">
+            <img src="./src/location-black.svg" alt="" />
+            <h4>санкт-петербург</h4>
+          </div>
+
+          <div class="area">
+            <img src="./src/location-black.svg" alt="" />
+            <h4>казань</h4>
+          </div>
+        </div>
+        <button id="backButton" class="back-button">
+          Назад <span><img src="./src/arrow-right.svg" alt="" /></span>
+        </button>
+      </div>
+      <div class="mobile-nav-body">
+        <input type="text" placeholder="Поиск" class="mobile-input" />
+        <a href="#"><p>SALE%</p></a>
+        <div class="nav-card">
+          <a href="#"><h4>новинки</h4></a>
+          <img src="./src/nav1.svg" alt="" />
+        </div>
+        <div class="nav-card">
+          <a href="#"><h4>одежда</h4></a>
+          <img src="./src/nav2.svg" alt="" />
+        </div>
+        <div class="nav-card">
+          <a href="#"><h4>Обувь</h4></a>
+          <img src="./src/nav3.svg" alt="" />
+        </div>
+        <div class="nav-card">
+          <a href="#"><h4>аксессуары</h4></a>
+          <img src="./src/nav4.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Header start-->
+    <header>
+      <div class="header_wrapper container">
+        <img src="./src/menu.svg" alt="" class="menu" />
+        <a href="main.html">
+          <img src="./src/logo.svg" alt="" />
+        </a>
+
+        <div class="locations">
+          <div class="location">
+            <img src="./src/location-icon.svg" alt="" />
+            <h4>москва</h4>
+          </div>
+
+          <div class="location">
+            <img src="./src/location-icon.svg" alt="" />
+            <h4>санкт-петербург</h4>
+          </div>
+
+          <div class="location">
+            <img src="./src/location-icon.svg" alt="" />
+            <h4>казань</h4>
+          </div>
+
+          <div class="location">
+            <img src="./src/location-icon.svg" alt="" />
+            <h4>Нижний новгород</h4>
+          </div>
+        </div>
+
+        <div class="input_wrapper unvisible">
+          <img src="./src/MagnifyingGlass-black.svg" alt="" />
+          <input type="text" class="header_search unvisible" />
+          <img
+            src="./src/X.svg"
+            alt=""
+            class="x_button"
+            style="cursor: pointer"
+          />
+        </div>
+
+        <div class="header_icons">
+          <button>
+            <img src="./src/MagnifyingGlass.svg" alt="" class="magni_button" />
+          </button>
+          <button>
+            <img src="./src/User.svg" alt="" id="open-popup" />
+          </button>
+
+          <div id="popup" class="popup hidden">
+            <div class="popup-content">
+              <span id="close-popup" class="close-btn"
+                ><img src="./src/X.svg" alt=""
+              /></span>
+              <h2 id="popup-title" style="margin-bottom: 20px">Вход</h2>
+              <form id="popup-form">
+                <label>
+                  <input type="email" placeholder="Введите ваш e-mail" />
+                </label>
+                <p id="popup-divider">или</p>
+                <label id="phone-input">
+                  <input type="text" placeholder="Введите ваш номер телефона" />
+                </label>
+                <label>
+                  <input type="password" placeholder="Введите ваш пароль" />
+                </label>
+                <button type="submit" id="primary-btn" class="btn">
+                  ВОЙТИ
+                </button>
+                <button type="button" id="secondary-btn" class="btn secondary">
+                  ЗАРЕГИСТРИРОВАТЬСЯ
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <button><img src="./src/liked.svg" alt="" /></button>
+          <button><img src="./src/Bag.svg" alt="" /></button>
+        </div>
+      </div>
+    </header>
+    <!-- Top Header finish-->
+
+    <!-- Navbar section start -->
+    <nav class="container">
+      <div class="nav_links">
+        <div>
+          <a href="#" class="menu-item">новинки</a>
+          <div class="mega_dropdown">
+            <ul class="dropdown_list">
+              <h4>Новинки</h4>
+              <li><a href="#">Посмотреть все</a></li>
+              <li><a href="#">Одежда</a></li>
+              <li><a href="#">Обувь</a></li>
+              <li><a href="#">Пуховики и куртки</a></li>
+              <li><a href="#">Худи</a></li>
+              <li><a href="#">Футболки</a></li>
+              <li><a href="#">Спортивная одежда</a></li>
+              <li><a href="#">Аксессуары</a></li>
+            </ul>
+
+            <ul class="dropdown_list">
+              <h4>Новинки брендов</h4>
+              <li><a href="#">Adidas</a></li>
+              <li><a href="#">New Balance</a></li>
+              <li><a href="#">Bape</a></li>
+              <li><a href="#">Nike</a></li>
+              <li><a href="#">Carhartt</a></li>
+              <li><a href="#">Vlone</a></li>
+              <li><a href="#">The North Face</a></li>
+              <li><a href="#">Gap</a></li>
+              <li><a href="#">Vence</a></li>
+            </ul>
+
+            <div class="top">
+              <h4>Топ избранных</h4>
+
+              <div class="top_products">
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/tshirt.svg" alt="" />
+                    <p>Футболки</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/hoodie.svg" alt="" />
+                    <p>Худи</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/sweetshot.svg" alt="" />
+                    <p>Свитшоты</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/longsliw.svg" alt="" />
+                    <p>Лонгсливы</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="categories">
+              <a href="#">
+                <div class="category">
+                  <h4>Худи и толстовки</h4>
+                  <img src="./src/category1.svg" alt="" />
+                </div>
+              </a>
+              <a href="#">
+                <div class="category">
+                  <h4>Ветровки</h4>
+                  <img src="./src/category2.svg" alt="" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="#" class="menu-item">одежда</a>
+          <div class="mega_dropdown">
+            <ul class="dropdown_list">
+              <h4>Одежда</h4>
+              <li><a href="#">Посмотреть все</a></li>
+              <li><a href="#">Бестселлеры</a></li>
+              <li><a href="#">Новое в разделе “Одежда”</a></li>
+              <li><a href="#">Пуховики и куртки</a></li>
+              <li><a href="#">Худи и Свитшоты</a></li>
+              <li><a href="#">Джинсы</a></li>
+              <li><a href="#">Футболки</a></li>
+              <li><a href="#">Джоггеры</a></li>
+            </ul>
+
+            <ul class="dropdown_list">
+              <h4>Новинки брендов</h4>
+              <li><a href="#">Adidas</a></li>
+              <li><a href="#">New Balance</a></li>
+              <li><a href="#">Bape</a></li>
+              <li><a href="#">Nike</a></li>
+              <li><a href="#">Carhartt</a></li>
+              <li><a href="#">Vlone</a></li>
+              <li><a href="#">The North Face</a></li>
+              <li><a href="#">Gap</a></li>
+              <li><a href="#">Vence</a></li>
+            </ul>
+
+            <div class="top">
+              <h4>Топ избранных</h4>
+
+              <div class="top_products">
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/tshirt.svg" alt="" />
+                    <p>Футболки</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/hoodie.svg" alt="" />
+                    <p>Худи</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/sweetshot.svg" alt="" />
+                    <p>Свитшоты</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/longsliw.svg" alt="" />
+                    <p>Лонгсливы</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="categories">
+              <a href="#">
+                <div class="category">
+                  <h4>Худи и толстовки</h4>
+                  <img src="./src/category1.svg" alt="" />
+                </div>
+              </a>
+              <a href="#">
+                <div class="category">
+                  <h4>Ветровки</h4>
+                  <img src="./src/category2.svg" alt="" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="#" class="menu-item">Обувь</a>
+          <div class="mega_dropdown">
+            <ul class="dropdown_list">
+              <h4>Обувь</h4>
+              <li><a href="#">Посмотреть все</a></li>
+              <li><a href="#">Кроссовки</a></li>
+              <li><a href="#">Кеды</a></li>
+              <li><a href="#">Мокасины</a></li>
+              <li><a href="#">Сандали</a></li>
+              <li><a href="#">Тапочки</a></li>
+              <li><a href="#">Спортивные кроссовки</a></li>
+            </ul>
+
+            <ul class="dropdown_list">
+              <h4>Новинки брендов</h4>
+              <li><a href="#">Adidas</a></li>
+              <li><a href="#">New Balance</a></li>
+              <li><a href="#">Bape</a></li>
+              <li><a href="#">Nike</a></li>
+              <li><a href="#">Carhartt</a></li>
+              <li><a href="#">Vlone</a></li>
+              <li><a href="#">The North Face</a></li>
+              <li><a href="#">Gap</a></li>
+              <li><a href="#">Vence</a></li>
+            </ul>
+
+            <div class="top">
+              <h4>Топ избранных</h4>
+
+              <div class="top_products">
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/tshirt.svg" alt="" />
+                    <p>Футболки</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/hoodie.svg" alt="" />
+                    <p>Худи</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/sweetshot.svg" alt="" />
+                    <p>Свитшоты</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/longsliw.svg" alt="" />
+                    <p>Лонгсливы</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="categories">
+              <a href="#">
+                <div class="category">
+                  <h4>Кроссовки Nike</h4>
+                  <img src="./src/shoes.svg" alt="" />
+                </div>
+              </a>
+              <a href="#">
+                <div class="category">
+                  <h4>Кроссовки Nike</h4>
+                  <img src="./src/shoes.svg" alt="" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="#" class="menu-item">аксессуары</a>
+          <div class="mega_dropdown">
+            <ul class="dropdown_list">
+              <h4>Аксессуары</h4>
+              <li><a href="#">Посмотреть все</a></li>
+              <li><a href="#">Кепки и панамки</a></li>
+              <li><a href="#">Шарфы</a></li>
+              <li><a href="#">Перчатки</a></li>
+              <li><a href="#">Ремни</a></li>
+              <li><a href="#">Подарки</a></li>
+              <li><a href="#">Солнечные очки</a></li>
+              <li><a href="#">Кольца</a></li>
+              <li><a href="#">Браслеты</a></li>
+            </ul>
+
+            <ul class="dropdown_list">
+              <h4>Популярные бренды</h4>
+              <li><a href="#">Nike</a></li>
+              <li><a href="#">Adidas</a></li>
+              <li><a href="#">New Balance</a></li>
+              <li><a href="#">Bape Sta</a></li>
+              <li><a href="#">Air Jordan</a></li>
+              <li><a href="#">Converse</a></li>
+            </ul>
+
+            <div class="top">
+              <h4>Топ избранных</h4>
+
+              <div class="top_products">
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/tshirt.svg" alt="" />
+                    <p>Футболки</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/hoodie.svg" alt="" />
+                    <p>Худи</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/sweetshot.svg" alt="" />
+                    <p>Свитшоты</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/longsliw.svg" alt="" />
+                    <p>Лонгсливы</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="categories">
+              <a href="#">
+                <div class="category">
+                  <h4>Худи и толстовки</h4>
+                  <img src="./src/category1.svg" alt="" />
+                </div>
+              </a>
+              <a href="#">
+                <div class="category">
+                  <h4>Ветровки</h4>
+                  <img src="./src/category2.svg" alt="" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="#" class="menu-item">Любимые бренды</a>
+          <div class="mega_dropdown">
+            <ul class="dropdown_list">
+              <h4>Обувь</h4>
+              <li><a href="#">Посмотреть все</a></li>
+              <li><a href="#">Кроссовки</a></li>
+              <li><a href="#">Кеды</a></li>
+              <li><a href="#">Мокасины</a></li>
+              <li><a href="#">Сандали</a></li>
+              <li><a href="#">Тапочки</a></li>
+              <li><a href="#">Спортивные кроссовки</a></li>
+            </ul>
+
+            <ul class="dropdown_list">
+              <h4>Новинки брендов</h4>
+              <li><a href="#">Adidas</a></li>
+              <li><a href="#">New Balance</a></li>
+              <li><a href="#">Bape</a></li>
+              <li><a href="#">Nike</a></li>
+              <li><a href="#">Carhartt</a></li>
+              <li><a href="#">Vlone</a></li>
+              <li><a href="#">The North Face</a></li>
+              <li><a href="#">Gap</a></li>
+              <li><a href="#">Vence</a></li>
+            </ul>
+
+            <div class="top">
+              <h4>Топ избранных</h4>
+
+              <div class="top_products">
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/tshirt.svg" alt="" />
+                    <p>Футболки</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/hoodie.svg" alt="" />
+                    <p>Худи</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/sweetshot.svg" alt="" />
+                    <p>Свитшоты</p>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="product">
+                    <img src="./src/longsliw.svg" alt="" />
+                    <p>Лонгсливы</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="categories">
+              <a href="#">
+                <div class="category">
+                  <h4>Кроссовки Nike</h4>
+                  <img src="./src/shoes.svg" alt="" />
+                </div>
+              </a>
+              <a href="#">
+                <div class="category">
+                  <h4>Кроссовки Nike</h4>
+                  <img src="./src/shoes.svg" alt="" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="#" style="color: red">sale %</a>
+      </div>
+    </nav>
+    <!-- Navbar section finish -->
+
+    <!-- Hero section start -->
+    <main>
+      <div class="container hero">
+        <div class="swiper heroSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide heroSlides">
+              <img src="./src/hero-left.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/hero-right.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/hero-left.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/hero-right.png" alt="" />
+            </div>
+          </div>
+          <div
+            class="main-pagination"
+            style="position: absolute; left: 605px; z-index: 2"
+          ></div>
+
+          <div class="main-actions">
+            <div class="main-button-prev">
+              <img src="./src/arrow-left.svg" alt="" class="mainAction" />
+            </div>
+            <div class="main-fraction"></div>
+            <div class="main-button-next">
+              <img src="./src/arrow-right.svg" alt="" class="mainAction" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="blur_block">
+        <h1>Spring Mood</h1>
+        <p>-20% на новую коллекцию.</p>
+        <button>
+          В каталог <span><img src="./src/arrow-right.svg" alt="" /></span>
+        </button>
+      </div>
+    </main>
+    <!-- Hero section finish -->
+
+    <!-- Categories section start -->
+    <section>
+      <!--! categories.js file -->
+    </section>
+    <!-- Categories section end -->
+
+    <!-- Brends part start -->
+    <div class="brends container">
+      <div class="brends_left">
+        <a href="#"><img src="./src/brends-left.png" alt="" /></a>
+      </div>
+
+      <div class="brends_right">
+        <div class="text">
+          <h1>Новинки любимых брендов</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Non
+            blandit massa enim nec dui nunc mattis. Enim blandit volutpat
+            maecenas volutpat blandit aliquam etiam.
+          </p>
+        </div>
+
+        <div class="swiper swiper-1">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="card">
+                  <img src="./src/brend1.png" alt="" />
+                  <h3>Мужская одежда</h3>
+                </div></a
+              >
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="card">
+                  <img src="./src/brend2.png" alt="" />
+                  <h3>Женская одежда</h3>
+                </div></a
+              >
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="card">
+                  <img src="./src/brend3.png" alt="" />
+                  <h3>Обувь</h3>
+                </div></a
+              >
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="card">
+                  <img src="./src/brend4.png" alt="" />
+                  <h3>Аксессуары</h3>
+                </div></a
+              >
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="card">
+                  <img src="./src/brend1.png" alt="" />
+                  <h3>Мужская одежда</h3>
+                </div></a
+              >
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="card">
+                  <img src="./src/brend2.png" alt="" />
+                  <h3>Женская одежда</h3>
+                </div></a
+              >
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="card">
+                  <img src="./src/brend3.png" alt="" />
+                  <h3>Обувь</h3>
+                </div></a
+              >
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="card">
+                  <img src="./src/brend4.png" alt="" />
+                  <h3>Аксессуары</h3>
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <div class="pagination"></div>
+          <div class="button-prev">
+            <img src="./src/arrow-left.svg" alt="" />
+          </div>
+
+          <span class="fraction"></span>
+
+          <div class="button-next">
+            <img src="./src/arrow-right.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Brends part end -->
+
+    <!-- Popular section start -->
+    <div class="popular container">
+      <div class="title">
+        <h1>Популярное</h1>
+        <a href="#"
+          >В каталог <span><img src="./src/arrow-right.svg" alt="" /></span
+        ></a>
+      </div>
+
+      <div class="popular_products">
+        <div class="swiper swiper2">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="popular_product">
+                <div class="nested-pagination"></div>
+                <div class="swiper nested-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="./src/popular1.png"
+                        alt=""
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./src/popular1.png"
+                        alt=""
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./src/popular1.png"
+                        alt=""
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./src/popular1.png"
+                        alt=""
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <img src="./src/liked.svg" alt="" class="like" />
+                <div class="price">
+                  <h2>3990 ₽</h2>
+                  <img
+                    src="./src/Bag-black.svg"
+                    alt=""
+                    style="width: 24px; cursor: pointer"
+                  />
+                </div>
+                <p>Stone Island</p>
+                <p style="margin-top: -10px">
+                  Зип худи шерпа с капюшоном (белый)
+                </p>
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <span class="size">40</span>
+                  <span class="size">46</span>
+                  <span class="size">52</span>
+                  <span class="size">58</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="popular_product">
+                <img
+                  src="./src/popular1.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+                <img src="./src/liked.svg" alt="" class="like" />
+                <div class="price">
+                  <h2>3990 ₽</h2>
+                  <img
+                    src="./src/Bag-black.svg"
+                    alt=""
+                    style="width: 24px; cursor: pointer"
+                  />
+                </div>
+                <p>Stone Island</p>
+                <p>Зип худи шерпа с капюшоном (белый)</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="popular_product">
+                <img
+                  src="./src/popular1.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+                <img src="./src/liked.svg" alt="" class="like" />
+                <div class="price">
+                  <h2>3990 ₽</h2>
+                  <img
+                    src="./src/Bag-black.svg"
+                    alt=""
+                    style="width: 24px; cursor: pointer"
+                  />
+                </div>
+                <p>Stone Island</p>
+                <p>Зип худи шерпа с капюшоном (белый)</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="popular_product">
+                <img
+                  src="./src/popular1.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+                <img src="./src/liked.svg" alt="" class="like" />
+                <div class="price">
+                  <h2>3990 ₽</h2>
+                  <img
+                    src="./src/Bag-black.svg"
+                    alt=""
+                    style="width: 24px; cursor: pointer"
+                  />
+                </div>
+                <p>Stone Island</p>
+                <p>Зип худи шерпа с капюшоном (белый)</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="popular_product">
+                <img
+                  src="./src/popular1.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+                <img src="./src/liked.svg" alt="" class="like" />
+                <div class="price">
+                  <h2>3990 ₽</h2>
+                  <img
+                    src="./src/Bag-black.svg"
+                    alt=""
+                    style="width: 24px; cursor: pointer"
+                  />
+                </div>
+                <p>Stone Island</p>
+                <p>Зип худи шерпа с капюшоном (белый)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popular section end -->
+
+    <!-- Actual part -->
+    <div class="actual container">
+      <h1>Актуальное</h1>
+      <div
+        class="actual_main"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div class="actual_left">
+          <div class="actual_card">
+            <img src="./src/actual1.png" alt="" />
+            <h2>Джинсы</h2>
+            <p>Все еще в тренде</p>
+          </div>
+          <div class="actual_card">
+            <img src="./src/actual2.png" alt="" />
+            <h2>Джинсы</h2>
+            <p>Все еще в тренде</p>
+          </div>
+        </div>
+
+        <div class="actual_right">
+          <div class="actual_card">
+            <img src="./src/actual3.png" alt="" />
+
+            <h2>Джинсы</h2>
+            <p>Все еще в тренде</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Actual part -->
+
+    <!-- Sale section start -->
+    <div class="popular sale container">
+      <div class="title">
+        <h1>Популярное</h1>
+        <a href="#"
+          >В каталог <span><img src="./src/arrow-right.svg" alt="" /></span
+        ></a>
+      </div>
+
+      <div class="popular_products">
+        <div class="swiper swiper2">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="popular_product">
+                <div class="nested-pagination"></div>
+                <div class="swiper nested-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="./src/popular1.png"
+                        alt=""
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./src/popular1.png"
+                        alt=""
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./src/popular1.png"
+                        alt=""
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./src/popular1.png"
+                        alt=""
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <img src="./src/liked.svg" alt="" class="like" />
+                <div class="price">
+                  <h2>3990 ₽</h2>
+                  <img
+                    src="./src/Bag-black.svg"
+                    alt=""
+                    style="width: 24px; cursor: pointer"
+                  />
+                </div>
+                <p>Stone Island</p>
+                <p style="margin-top: -10px">
+                  Зип худи шерпа с капюшоном (белый)
+                </p>
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <span class="size">40</span>
+                  <span class="size">46</span>
+                  <span class="size">52</span>
+                  <span class="size">58</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="popular_product">
+                <img
+                  src="./src/popular1.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+                <img src="./src/liked.svg" alt="" class="like" />
+                <div class="price">
+                  <h2>3990 ₽</h2>
+                  <img
+                    src="./src/Bag-black.svg"
+                    alt=""
+                    style="width: 24px; cursor: pointer"
+                  />
+                </div>
+                <p>Stone Island</p>
+                <p>Зип худи шерпа с капюшоном (белый)</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="popular_product">
+                <img
+                  src="./src/popular1.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+                <img src="./src/liked.svg" alt="" class="like" />
+                <div class="price">
+                  <h2>3990 ₽</h2>
+                  <img
+                    src="./src/Bag-black.svg"
+                    alt=""
+                    style="width: 24px; cursor: pointer"
+                  />
+                </div>
+                <p>Stone Island</p>
+                <p>Зип худи шерпа с капюшоном (белый)</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="popular_product">
+                <img
+                  src="./src/popular1.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+                <img src="./src/liked.svg" alt="" class="like" />
+                <div class="price">
+                  <h2>3990 ₽</h2>
+                  <img
+                    src="./src/Bag-black.svg"
+                    alt=""
+                    style="width: 24px; cursor: pointer"
+                  />
+                </div>
+                <p>Stone Island</p>
+                <p>Зип худи шерпа с капюшоном (белый)</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="popular_product">
+                <img
+                  src="./src/popular1.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+                <img src="./src/liked.svg" alt="" class="like" />
+                <div class="price">
+                  <h2>3990 ₽</h2>
+                  <img
+                    src="./src/Bag-black.svg"
+                    alt=""
+                    style="width: 24px; cursor: pointer"
+                  />
+                </div>
+                <p>Stone Island</p>
+                <p>Зип худи шерпа с капюшоном (белый)</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="popular_product">
+                <img
+                  src="./src/popular1.png"
+                  alt=""
+                  style="width: 100%; height: 100%"
+                />
+                <img src="./src/liked.svg" alt="" class="like" />
+                <div class="price">
+                  <h2>3990 ₽</h2>
+                  <img
+                    src="./src/Bag-black.svg"
+                    alt=""
+                    style="width: 24px; cursor: pointer"
+                  />
+                </div>
+                <p>Stone Island</p>
+                <p>Зип худи шерпа с капюшоном (белый)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sale section end -->
+
+    <!-- Email section -->
+    <div class="email">
+      <h1>Скидка 10% на подписку</h1>
+
+      <div class="form_wrapper">
+        <input type="text" class="form" placeholder="Ваш E-mail" />
+        <button class="form_button">Подписаться</button>
+      </div>
+
+      <p>
+        Подпишись на Street Beat в <a href="#">VKontakte</a>,
+        <a href="#">Telegram</a>, <a href="#">YouTobe</a>, чтобы не пропустить
+        свежие новости и посты о наших магазинах, а также о приглашениях,
+        распрадажах и мероприятиях.
+      </p>
+
+      <div class="socials">
+        <a href="#">
+          <img src="./src/vk.svg" alt="" />
+        </a>
+        <a href="#">
+          <img src="./src/telegram.svg" alt="" />
+        </a>
+        <a href="#">
+          <img src="./src/youtube.svg" alt="" />
+        </a>
+      </div>
+    </div>
+    <!-- Email section -->
+
+    <!-- News section -->
+    <div class="news container">
+      <h1>Модные новости</h1>
+
+      <div class="news_wrapper">
+        <div class="swiper news-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="new">
+                  <img src="./src/news1.png" alt="" />
+                  <h2>Совершайте покупки</h2>
+                  <p>Которые сделают мир лучше.</p>
+                </div></a
+              >
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="new">
+                  <img src="./src/news2.png" alt="" />
+                  <h2>Совершайте покупки</h2>
+                  <p>Которые сделают мир лучше.</p>
+                </div></a
+              >
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="new">
+                  <img src="./src/news3.png" alt="" />
+                  <h2>Совершайте покупки</h2>
+                  <p>Которые сделают мир лучше.</p>
+                </div></a
+              >
+            </div>
+            <div class="swiper-slide">
+              <a href="#"
+                ><div class="new">
+                  <img src="./src/news3.png" alt="" />
+                  <h2>Совершайте покупки</h2>
+                  <p>Которые сделают мир лучше.</p>
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- News section -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer_links">
+        <ul>
+          <h4>Помощь</h4>
+          <li><a href="#">Помощь покупателю</a></li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">Возврат</a></li>
+          <li><a href="#">Программа лояльности</a></li>
+        </ul>
+
+        <ul>
+          <h4>Каталог</h4>
+          <li><a href="#">новинки</a></li>
+          <li><a href="#">одежда</a></li>
+          <li><a href="#">Обувь</a></li>
+          <li><a href="#">аксессуары</a></li>
+          <li><a href="#">Любимые бренды</a></li>
+          <li><a href="#" style="color: red">Sale%</a></li>
+        </ul>
+
+        <ul>
+          <h4>Компания</h4>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Философия бренда</a></li>
+          <li><a href="#">Блог</a></li>
+          <li><a href="#">контакты</a></li>
+          <li><a href="#">Faq</a></li>
+        </ul>
+      </div>
+      <div class="sponsors">
+        <img src="./src/visa.svg" alt="" />
+        <img src="./src/mastercard.svg" alt="" />
+        <img src="./src/mir.svg" alt="" />
+      </div>
+      <div class="copyright"></div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/categories.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/copyright.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/timer.js"></script>
+    <script src="./js/like.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+  </body>
+</html>
